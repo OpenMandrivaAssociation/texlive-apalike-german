@@ -1,6 +1,6 @@
 Name:		texlive-apalike-german
-Version:	61719
-Release:	2
+Version:	65403
+Release:	1
 Summary:	A copy of apalike.bst with German localization
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/apalike-german

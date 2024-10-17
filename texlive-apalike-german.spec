@@ -3,7 +3,7 @@ Version:	65403
 Release:	1
 Summary:	A copy of apalike.bst with German localization
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/apalike-german
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/apalike-german
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.doc.r%{version}.tar.xz

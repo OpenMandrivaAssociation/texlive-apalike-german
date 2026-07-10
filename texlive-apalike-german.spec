@@ -1,36 +1,22 @@
-Name:		texlive-apalike-german
-Version:	65403
+%global tl_name apalike-german
+%global tl_revision 76790
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
 Summary:	A copy of apalike.bst with German localization
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/apalike-german
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/apalike-german
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/apalike-german.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A copy of apalike.bst (which is part of the base BibTeX
-distribution) with German localization.
+A copy of apalike.bst (which is part of the base BibTeX distribution)
+with German localization.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/bibtex/bst/apalike-german
-%doc %{_texmfdistdir}/doc/bibtex/apalike-german
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
